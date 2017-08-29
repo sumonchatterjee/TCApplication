@@ -15,7 +15,6 @@ public class ApiRequest {
     public static final int REQUEST_ID_1 = 0;
     public static final int REQUEST_ID_2 = 1;
     public static final int REQUEST_ID_3 = 2;
-
     private int mRequestId;
     private ApiRequestCallback mApiRequestCallback;
 
