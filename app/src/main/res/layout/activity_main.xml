@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn"
+                android:text="click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"/>
+
+            <RelativeLayout
+                android:layout_below="@+id/btn"
+                android:id="@+id/first_result_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/first_result_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fetch the first input..."
+                    android:textSize="18sp"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="sans-serif"/>
+
+                <ProgressBar
+                    android:id="@+id/first_result_progress_bar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/first_result_tv"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/second_result_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_result_wrapper"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/second_result_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fetch the second input..."
+                    android:textSize="18sp"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="sans-serif"/>
+
+                <ProgressBar
+                    android:id="@+id/second_result_progress_bar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/second_result_tv"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/third_result_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/second_result_wrapper"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+                <RelativeLayout
+                    android:id="@+id/third_input_loading_wrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:id="@+id/third_result_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fetch the third input..."
+                        android:textSize="18sp"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="sans-serif"/>
+
+                    <ProgressBar
+                        android:id="@+id/third_result_progress_bar"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/third_result_tv"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/third_input_result_wrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/third_input_loading_wrapper"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/input_user_wrapper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/input_user_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/submit_query_btn"
+                            android:hint="Submit Query"
+                            android:layout_marginRight="10dp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_alignBottom="@+id/submit_query_btn"
+                            android:layout_toLeftOf="@+id/submit_query_btn"
+                            android:background="#696969"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginRight="10dp"/>
+
+                        <Button
+                            android:id="@+id/submit_query_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Submit"
+                            android:layout_alignParentRight="true"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/count_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:layout_below="@+id/input_user_wrapper"/>
+
+                    <TextView
+                        android:id="@+id/layout_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/count_tv"
+                        android:layout_marginTop="10dp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>
+

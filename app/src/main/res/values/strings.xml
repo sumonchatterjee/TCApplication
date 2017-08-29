@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TCApplication</string>
+    <string name="display_name">First Tenth character is : %1$s </string>
+    <string name="first_input_display_name">First Tenth character is:\n</string>
+    <string name="second_input_display_name">Every Tenth character is:\n</string>
+    <string name="third_input_display_name">Enter Query to find counts:\n</string>
+</resources>
